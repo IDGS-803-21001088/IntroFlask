@@ -9,8 +9,9 @@ def index():
     return render_template('index.html', grupo=grupo, lista=lista)
 
 @app.route('/OperasBas')
-def operaBasicas():
+def operas():
     return render_template('OperasBas.html')
+
 
 @app.route('/resultado', methods=['GET', 'POST'])
 def resultado():
@@ -18,7 +19,6 @@ def resultado():
         num1 = request.form.get("n1")
         num2 = request.form.get("n2")
         return "La suma de {} + {} es: {}".format(num1, num2, int(num1)+int(num2))
-    
 
 @app.route('/ejemplo1')
 def ejemplo1():
