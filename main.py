@@ -37,13 +37,13 @@ def user(user):
     return f"Hola {user}!!!"
 
 @app.route("/numero/<int:n>")
-def numero(n):
+def numero(n): 
     return f"Numero {n}"
 
 @app.route("/user/<string:user>/<int:id>")
 def username(user, id):
     return f"Nombre; {user} ID: {id}!!!"
-
+ 
 @app.route("/suma/<float:n1>/<float:n2>")
 def suma(n1, n2):
     return "La suma es: {}!!".format(n1+n2)
